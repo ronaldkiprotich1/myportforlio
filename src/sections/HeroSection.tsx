@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
-import myProfile from "../assets/images/samuel-mwai.jpg";
+import myProfile from "../assets/images/ronald-kiprotich.jpg";
 import { Typewriter } from "react-simple-typewriter";
 
 import AOS from "aos";
@@ -39,7 +39,7 @@ const HeroSection = () => {
                 className="text-4xl md:text-6xl font-bold text-orange-400 leading-tight"
               >
                 <Typewriter
-                  words={["Hello, I'm Samuel Mwai", "A Web Developer"]}
+                  words={["Hello, I'm Ronald Kiprotich", "A Fullstack Developer"]}
                   loop={0}
                   cursor
                   cursorStyle="|"

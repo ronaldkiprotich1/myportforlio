@@ -18,7 +18,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-emerald-400">Samuel M</div>
+          <div className="text-2xl font-bold text-emerald-400">RK</div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -39,9 +39,10 @@ const Header = () => {
               className="bg-gradient-to-r from-orange-400 to-emerald-400 cursor-pointer hover:bg-gradient-to-l hover:from-emerald-400 hover:to-orange-400 transition-all duration-200 ease-in-out"
               variant="default"
             >
-              <a href="https://www.dropbox.com/scl/fi/rxe27nfa58v30hrzkf8yk/CV-Update.pdf?rlkey=qu78lz97oelu1xusw79uentbu&dl=0">
-                Download CV
-              </a>
+            <a href="https://drive.google.com/uc?export=download&id=1zWy1h5Hw2xnzvQIIpz-7lQYDNXTsXM11">
+  Download CV
+</a>
+
             </Button>
           </div>
 

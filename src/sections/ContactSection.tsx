@@ -55,19 +55,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "mwaisamuel432@gmail.com",
-      href: "mailto:mwaisamuel432@gmail.com",
+      value: "kironlang@gmail.com",
+      href: "mailto:kironlang@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+254 115450287",
-      href: "tel:+254115450287",
+      value: "+254 729971518",
+      href: "tel:+254729971518",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Nyeri, Kenya",
+      value: "Nairobi, Kenya",
       href: "#",
     },
   ];
