@@ -2,7 +2,7 @@ import { useAppSelector } from "@/hooks/redux";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-import meruyouth from "../assets/images/meru youth.png";
+import meruyouth from "../assets/images/meruyouth.png";
 import merucounty from "../assets/images/merucounty.png";
 import martians from "../assets/images/martians.png";
 import AOS from "aos";

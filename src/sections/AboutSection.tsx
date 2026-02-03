@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import developerWorking from "../assets/images/developerMe.jpg";
 import AOS from "aos";
@@ -9,6 +8,7 @@ const AboutSection = () => {
   useEffect(() => {
     AOS.init({ duration: 700, easing: "ease-in-out", once: false });
   }, []);
+  
   const capabilities = [
     "Full-stack web development with modern technologies",
     "Responsive design for all devices and screen sizes",
@@ -21,7 +21,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right" className="relative">
-            <div className="bg-gradient-to-br from-orange-400/20 to-emerald-400/20 rounded-3xl p-8">
+            <div className="bg-linear-to-br from-orange-400/20 to-emerald-400/20 rounded-3xl p-8">
               <img
                 src={developerWorking}
                 alt="Developer working"
@@ -29,7 +29,7 @@ const AboutSection = () => {
               />
             </div>
             {/* Decorative geometric shapes */}
-            <div className="absolute -top-6 -right-0 w-18 lg:-right-6 lg:w-24 lg:h-24 h-18 bg-primary/30 rounded-lg transform rotate-45"></div>
+            <div className="absolute -top-6 right-0 w-18 lg:-right-6 lg:w-24 lg:h-24 h-18 bg-primary/30 rounded-lg transform rotate-45"></div>
             <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-secondary/40 rounded-full"></div>
           </div>
 
@@ -51,7 +51,7 @@ const AboutSection = () => {
             <div className="space-y-4">
               {capabilities.map((capability, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-primary mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-primary mt-0.5 shrink-0" />
                   <span className="text-foreground">{capability}</span>
                 </div>
               ))}
@@ -75,13 +75,6 @@ const AboutSection = () => {
                 </div>
               </div>
             </div>
-
-            <Button
-              className="bg-gradient-to-r from-orange-400 to-emerald-400 mt-8 cursor-pointer"
-              size="lg"
-            >
-              Download CV
-            </Button>
           </div>
         </div>
       </div>

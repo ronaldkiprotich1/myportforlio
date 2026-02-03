@@ -11,7 +11,6 @@ const HeroSection = () => {
   useEffect(() => {
     AOS.init({ duration: 700, easing: "ease-in-out", once: false });
 
-    // Refresh AOS on scroll and resize to re-trigger animations
     const handleScroll = () => AOS.refresh();
 
     window.addEventListener("scroll", handleScroll);
@@ -69,9 +68,9 @@ const HeroSection = () => {
             >
               <Button
                 size="lg"
-                className="group bg-gradient-to-r from-orange-400 to-emerald-400 cursor-pointer"
+                className="group bg-linear-to-r from-orange-400 to-emerald-400 cursor-pointer"
               >
-                <a href="https://www.dropbox.com/scl/fi/rxe27nfa58v30hrzkf8yk/CV-Update.pdf?rlkey=qu78lz97oelu1xusw79uentbu&dl=0">
+                <a href="/Ronald.Kiprotich.CV.pdf" download>
                   Download CV
                 </a>
                 <Download className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
@@ -91,8 +90,8 @@ const HeroSection = () => {
                 rounded-3xl 
                 duration-300
                 p-0 md:p-8
-                lg:bg-gradient-to-br lg:from-orange-400 lg:to-emerald-400 
-                lg:transform lg:rotate-90 lg:hover:rotate-[85deg]
+                lg:bg-linear-to-br lg:from-orange-400 lg:to-emerald-400 
+                lg:transform lg:rotate-90 lg:hover:rotate-85
               "
             >
               <div
@@ -106,8 +105,8 @@ const HeroSection = () => {
                 <span>
                   <img
                     src={myProfile}
-                    alt="samuel-mwai"
-                    className="h-[700px] lg:h-[500px] object-contain w-fit"
+                    alt="ronald-kiprotich"
+                    className="h-175 lg:h-125 object-contain w-fit"
                   />
                 </span>
               </div>
