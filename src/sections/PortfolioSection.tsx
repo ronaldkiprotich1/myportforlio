@@ -2,12 +2,9 @@ import { useAppSelector } from "@/hooks/redux";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-import ecommerceApp from "../assets/images/shopify-website.png";
-import hotelMng from "../assets/images/hotel-mng-app.png";
-import movieApp from "../assets/images/movie-app.png";
-import colorsWebsite from "../assets/images/scrolls-colors.png";
-import suchiWebsite from "../assets/images/suchiman.png";
-import ecommercePlatform from "../assets/images/fresh-cart.png";
+import meruyouth from "../assets/images/meru youth.png";
+import merucounty from "../assets/images/merucounty.png";
+import martians from "../assets/images/martians.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -33,57 +30,26 @@ const PortfolioSection = () => {
   const defaultProjects = [
     {
       id: "1",
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with React and Node.js",
-      image: ecommerceApp,
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://shopping-app-zustand.vercel.app",
-      githubUrl: "https://github.com/Mwaisammy/shopping-app-zustand",
+      title: "Martians Consulting",
+      description: "Professional consulting services platform",
+      image: martians,
+      liveUrl: "https://martiansconsulting.com/",
     },
     {
       id: "2",
-      title: "Hotel Management App",
+      title: "Meru Youth",
       description: "Collaborative task management application",
-      image: hotelMng,
-      technologies: ["Vue.js", "Firebase", "Vuetify"],
-      liveUrl: "#",
+      image: meruyouth,
+      liveUrl: "https://meruyouthservice.go.ke/",
       githubUrl: "#",
     },
     {
       id: "3",
-      title: "Movies app",
-      description: "Modern movies website with awesome UI",
-      image: movieApp,
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
-      liveUrl: "https://react-movie-app-cyan-rho.vercel.app",
-      githubUrl: "https://github.com/Mwaisammy/react-movie-app",
-    },
-    {
-      id: "4",
-      title: "Colors website",
-      description: "Website to showcase my web development skills",
-      image: colorsWebsite,
-      technologies: ["Next.js", "Chart.js", "PostgreSQL"],
-      liveUrl: "https://colors-website.vercel.app",
-      githubUrl: "https://github.com/Mwaisammy/Colors-Website.git",
-    },
-    {
-      id: "5",
-      title: "Suchi website",
-      description: "Website for a starter restaurant/hotel",
-      image: suchiWebsite,
-      technologies: ["HTML CSS", "JavaScript"],
-      liveUrl: "https://sushi-website-opal.vercel.app/",
-      githubUrl: "https://github.com/Mwaisammy/suchi-website.git",
-    },
-    {
-      id: "6",
-      title: "Ecommerce Platform",
-      description: "Modern ecomerce platform with CMS",
-      image: ecommercePlatform,
-      technologies: ["NextJS", "React", "ClerkAuth"],
-      liveUrl: "https://freshcart-next-js.vercel.app/shop/shop-grid",
-      githubUrl: "#",
+      title: "Meru County Project Management",
+      description: "Modern project management system",
+      image: merucounty,
+      liveUrl: "",
+      githubUrl: "https://github.com/ronaldkiprotich1/MERU-COUNTY-PROJECT-MANAGEMENT-SYSTEM.git",
     },
   ];
 
@@ -152,19 +118,9 @@ const PortfolioSection = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-2">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
               </CardContent>
             </Card>
           ))}

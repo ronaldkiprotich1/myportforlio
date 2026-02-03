@@ -39,7 +39,7 @@ const Header = () => {
               className="bg-gradient-to-r from-orange-400 to-emerald-400 cursor-pointer hover:bg-gradient-to-l hover:from-emerald-400 hover:to-orange-400 transition-all duration-200 ease-in-out"
               variant="default"
             >
-            <a href="https://drive.google.com/uc?export=download&id=1zWy1h5Hw2xnzvQIIpz-7lQYDNXTsXM11">
+            <a href="">
   Download CV
 </a>
 
