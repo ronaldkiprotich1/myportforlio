@@ -70,7 +70,7 @@ const HeroSection = () => {
                 size="lg"
                 className="group bg-linear-to-r from-orange-400 to-emerald-400 cursor-pointer"
               >
-                <a href="/Ronald.Kiprotich.CV.pdf" download>
+                <a href="/RK.CV.pdf" download>
                   Download CV
                 </a>
                 <Download className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />

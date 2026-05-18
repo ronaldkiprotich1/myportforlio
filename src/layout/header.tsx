@@ -38,7 +38,7 @@ const Header = () => {
               className="bg-gradient-to-r from-orange-400 to-emerald-400 cursor-pointer hover:bg-gradient-to-l hover:from-emerald-400 hover:to-orange-400 transition-all duration-200 ease-in-out"
               variant="default"
             >
-              <a href="/Ronald.Kiprotich.CV.pdf" download>Download CV</a>
+              <a href="/RK.CV.pdf" download>Download CV</a>
             </Button>
           </div>
 
@@ -68,7 +68,7 @@ const Header = () => {
                 <ModeToggle />
               </div>
               <Button variant="default" className="w-full mt-4">
-                <a href="/Ronald.Kiprotich.CV.pdf" download>Download CV</a>
+                <a href="/RK.CV.pdf" download>Download CV</a>
               </Button>
             </div>
           </nav>
