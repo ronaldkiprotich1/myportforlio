@@ -4,77 +4,114 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
+const capabilities = [
+  "Full-stack web development with modern technologies",
+  "Responsive design for all devices and screen sizes",
+  "API development and third-party integrations",
+  "Performance optimization and SEO best practices",
+];
+
+const stats = [
+  { value: "2+", label: "Years exp." },
+  { value: "98%", label: "Project Success" },
+  { value: "100%", label: "Client Satisfaction" },
+];
+
 const AboutSection = () => {
   useEffect(() => {
     AOS.init({ duration: 700, easing: "ease-in-out", once: false });
+    const handleScroll = () => AOS.refresh();
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
-  
-  const capabilities = [
-    "Full-stack web development with modern technologies",
-    "Responsive design for all devices and screen sizes",
-    "API development and third-party integrations",
-    "Performance optimization and SEO best practices",
-  ];
 
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
+
+          {/* ── Left: Image ── */}
           <div data-aos="fade-right" className="relative">
-            <div className="bg-linear-to-br from-orange-400/20 to-emerald-400/20 rounded-3xl p-8">
+            {/* Glow backdrop */}
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-400/15 to-emerald-400/15 rounded-3xl blur-2xl" />
+
+            {/* Image frame */}
+            <div className="relative rounded-3xl overflow-hidden border border-border/40 shadow-xl">
               <img
                 src={developerWorking}
-                alt="Developer working"
-                className="w-full h-auto rounded-2xl object-cover"
+                alt="Ronald working"
+                className="w-full h-auto object-cover"
               />
+              {/* Overlay gradient at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background/60 to-transparent" />
             </div>
-            {/* Decorative geometric shapes */}
-            <div className="absolute -top-6 right-0 w-18 lg:-right-6 lg:w-24 lg:h-24 h-18 bg-primary/30 rounded-lg transform rotate-45"></div>
-            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-secondary/40 rounded-full"></div>
+
+            {/* Decorative shapes */}
+            <div className="absolute -top-5 -right-5 w-20 h-20 bg-orange-400/20 rounded-xl rotate-12 blur-sm" />
+            <div className="absolute -bottom-5 -left-5 w-14 h-14 bg-emerald-400/20 rounded-full blur-sm" />
           </div>
 
-          <div data-aos="fade-down" className="space-y-6">
+          {/* ── Right: Content ── */}
+          <div data-aos="fade-left" className="space-y-8">
+
+            {/* Tag + heading */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                I Can Develop Anything
+              <div className="inline-flex items-center gap-2 border border-orange-400/40 rounded-full px-4 py-1.5 mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
+                <span className="text-orange-400 text-xs tracking-[2px] uppercase font-light">
+                  About me
+                </span>
+              </div>
+              <h2
+                className="font-extrabold leading-tight tracking-tight mb-4"
+                style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
+                }}
+              >
+                I can build anything
                 <br />
-                <span className="text-primary">For Your Needs</span>
+                <span className="text-orange-400">for your needs</span>
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                With over 2 years of experience in web development, I specialize
-                in creating scalable, performant, and user-friendly
-                applications. I'm passionate about clean code, modern design,
-                and delivering exceptional user experiences.
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                With over 2 years of experience in web and mobile development, I
+                specialize in building scalable, performant, and user-friendly
+                applications. I care deeply about clean code, thoughtful design,
+                and shipping things that actually work.
               </p>
             </div>
 
-            <div className="space-y-4">
-              {capabilities.map((capability, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-primary mt-0.5 shrink-0" />
-                  <span className="text-foreground">{capability}</span>
+            {/* Capabilities */}
+            <div className="space-y-3">
+              {capabilities.map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-orange-400 mt-0.5 shrink-0" />
+                  <span className="text-foreground text-sm">{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex items-center space-x-8 pt-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">
-                  Project Success
+            {/* Stats row */}
+            <div className="flex gap-8 pt-4 border-t border-border/50">
+              {stats.map(({ value, label }) => (
+                <div key={label}>
+                  <div
+                    className="text-2xl font-extrabold text-orange-400 leading-none mb-1"
+                    style={{ fontFamily: "'Syne', sans-serif" }}
+                  >
+                    {value}
+                  </div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                    {label}
+                  </div>
                 </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">Support</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">100%</div>
-                <div className="text-sm text-muted-foreground">
-                  Client Satisfaction
-                </div>
-              </div>
+              ))}
             </div>
+
           </div>
         </div>
       </div>
