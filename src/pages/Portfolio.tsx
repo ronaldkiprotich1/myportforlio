@@ -5,18 +5,25 @@ import FAQSection from "@/sections/FAQSection";
 import HeroSection from "@/sections/HeroSection";
 import PortfolioSection from "@/sections/PortfolioSection";
 import ServicesSection from "@/sections/ServiceSection";
-// import StatsSection from "@/sections/StatsSection";
+import SkillsSection from "@/sections/SkillsSection";
+import TimelineSection from "@/sections/TimelineSection";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const Portfolio = () => {
   return (
     <div className="min-h-screen">
+      {/* Scroll progress bar — sits at very top of page */}
+      <ScrollProgress />
+
       <Header />
+
       <main>
         <HeroSection />
         <ServicesSection />
         <AboutSection />
+        <SkillsSection />
         <PortfolioSection />
-        {/* <StatsSection /> */}
+        <TimelineSection />
         <FAQSection />
         <ContactSection />
       </main>
